@@ -1,0 +1,33 @@
+version: '3'
+
+# a service is a container.
+services:
+
+ #server container - keyword "server"
+ server:
+  image: ikramhub/multi-chat-python_server:latest
+  
+
+
+  #map ports from the docker container back to host machine
+  ports:
+   - "8989:8989"
+   
+   
+ #client container - keyword "client"
+ client:
+  image: ikramhub/multi-chat-python_client:latest
+
+
+  network_mode: host
+
+  depends_on:
+   - server
+
+#1. To create image locally:                docker-compose build
+#2. To run the server [in a container]:     docker-compose up
+#3. To run the clients [from host machine]: py client.py
+
+#both build anr run do the following:
+#> install dependencies in a container
+#> run our chat server (from Dockerfile)

@@ -1,0 +1,5 @@
+setup.py
+server_python.egg-info/PKG-INFO
+server_python.egg-info/SOURCES.txt
+server_python.egg-info/dependency_links.txt
+server_python.egg-info/top_level.txt
