@@ -1,4 +1,4 @@
-'''____ SERVER____
+'''____ CLIENT____
 - Connect to server
 - Sends/Recevies messages to/from server (in PARALLEL)
 '''
